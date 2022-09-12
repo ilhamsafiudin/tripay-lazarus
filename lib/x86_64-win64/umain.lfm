@@ -1,0 +1,222 @@
+object frmMain: TfrmMain
+  Left = 257
+  Height = 434
+  Top = 31
+  Width = 331
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'App Test API Tripay - Wak Ilham'
+  ClientHeight = 434
+  ClientWidth = 331
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  object mLog: TMemo
+    Left = 0
+    Height = 123
+    Top = 288
+    Width = 331
+    Align = alClient
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 411
+    Width = 331
+    Panels = <    
+      item
+        Text = '@ 2022 - wak ilham'
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object PageControl2: TPageControl
+    Left = 0
+    Height = 288
+    Top = 0
+    Width = 331
+    ActivePage = TabSheet1
+    Align = alTop
+    TabIndex = 0
+    TabOrder = 2
+    object TabSheet1: TTabSheet
+      Caption = 'Payment'
+      ClientHeight = 260
+      ClientWidth = 323
+      object PageControl1: TPageControl
+        Left = 0
+        Height = 296
+        Top = 0
+        Width = 323
+        ActivePage = TabSheet3
+        Align = alTop
+        TabIndex = 0
+        TabOrder = 0
+        object TabSheet3: TTabSheet
+          Caption = 'Payment Instruction'
+          ClientHeight = 268
+          ClientWidth = 315
+          object eCode1: TEdit
+            Left = 21
+            Height = 23
+            Top = 43
+            Width = 275
+            TabOrder = 0
+          end
+          object Label1: TLabel
+            Left = 21
+            Height = 15
+            Top = 26
+            Width = 28
+            Caption = 'Code'
+            ParentColor = False
+          end
+          object btnSend1: TButton
+            Left = 221
+            Height = 25
+            Top = 80
+            Width = 75
+            Caption = 'Get'
+            OnClick = btnSend1Click
+            TabOrder = 1
+          end
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Merchant'
+      ClientHeight = 260
+      ClientWidth = 323
+      object PageControl3: TPageControl
+        Left = 0
+        Height = 260
+        Top = 0
+        Width = 323
+        ActivePage = TabSheet4
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 0
+        object TabSheet4: TTabSheet
+          Caption = 'Payment Channel'
+          ClientHeight = 232
+          ClientWidth = 315
+          object eCode2: TEdit
+            Left = 21
+            Height = 23
+            Top = 43
+            Width = 275
+            TabOrder = 0
+          end
+          object Label2: TLabel
+            Left = 21
+            Height = 15
+            Top = 26
+            Width = 28
+            Caption = 'Code'
+            ParentColor = False
+          end
+          object btnSend2: TButton
+            Left = 221
+            Height = 25
+            Top = 80
+            Width = 75
+            Caption = 'Get'
+            OnClick = btnSend2Click
+            TabOrder = 1
+          end
+        end
+        object TabSheet5: TTabSheet
+          Caption = 'Fee Calculator'
+          ClientHeight = 232
+          ClientWidth = 315
+          object eCode3: TEdit
+            Left = 21
+            Height = 23
+            Top = 43
+            Width = 275
+            TabOrder = 0
+          end
+          object Label3: TLabel
+            Left = 21
+            Height = 15
+            Top = 26
+            Width = 28
+            Caption = 'Code'
+            ParentColor = False
+          end
+          object btnSend3: TButton
+            Left = 221
+            Height = 25
+            Top = 128
+            Width = 75
+            Caption = 'Get'
+            OnClick = btnSend3Click
+            TabOrder = 1
+          end
+          object eAmount1: TEdit
+            Left = 21
+            Height = 23
+            Top = 89
+            Width = 275
+            NumbersOnly = True
+            TabOrder = 2
+          end
+          object Label4: TLabel
+            Left = 21
+            Height = 15
+            Top = 72
+            Width = 44
+            Caption = 'Amount'
+            ParentColor = False
+          end
+        end
+        object TabSheet6: TTabSheet
+          Caption = 'Transaction List'
+          ClientHeight = 232
+          ClientWidth = 315
+          object ePage1: TEdit
+            Left = 21
+            Height = 23
+            Top = 43
+            Width = 275
+            TabOrder = 0
+          end
+          object Label5: TLabel
+            Left = 21
+            Height = 15
+            Top = 26
+            Width = 26
+            Caption = 'Page'
+            ParentColor = False
+          end
+          object btnSend4: TButton
+            Left = 221
+            Height = 25
+            Top = 128
+            Width = 75
+            Caption = 'Get'
+            OnClick = btnSend4Click
+            TabOrder = 1
+          end
+          object ePerPage1: TEdit
+            Left = 21
+            Height = 23
+            Top = 89
+            Width = 275
+            NumbersOnly = True
+            TabOrder = 2
+          end
+          object Label7: TLabel
+            Left = 21
+            Height = 15
+            Top = 72
+            Width = 46
+            Caption = 'Per Page'
+            ParentColor = False
+          end
+        end
+      end
+    end
+  end
+end
