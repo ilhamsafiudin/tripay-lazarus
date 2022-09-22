@@ -66,6 +66,7 @@ implementation
 
 { TfrmMain }
 
+//method post
 function requestdata_post(Url: string; Params: string): string;
 var
   Client: TFPHttpClient;
@@ -91,6 +92,7 @@ begin
    end;
 end;
 
+//method get
 function requestdata_get(Url: string; Payload: string): string;
 var
   Client: TFPHttpClient;
@@ -118,6 +120,7 @@ begin
 
 end;
 
+//endpoint: /payment/instruction
 procedure TfrmMain.btnSend1Click(Sender: TObject);
 var
   Data: string;
@@ -128,6 +131,7 @@ begin
    mLog.Lines.Add('log payment instruction: ' + Data);
 end;
 
+//endpoint: /merchant/payment-channel
 procedure TfrmMain.btnSend2Click(Sender: TObject);
 var
   Data: string;
@@ -138,6 +142,7 @@ begin
   mLog.Lines.Add('log payment channel: ' + Data);
 end;
 
+//endpoint: /merchant/fee-calculator
 procedure TfrmMain.btnSend3Click(Sender: TObject);
 var
   Data: string;
@@ -148,6 +153,7 @@ begin
   mLog.Lines.Add('log fee calculator: ' + Data);
 end;
 
+//endpoint: /merchant/transactions
 procedure TfrmMain.btnSend4Click(Sender: TObject);
 var
   Data: string;
